@@ -1,0 +1,45 @@
+<div>
+    <div style="padding-top: 5vh;">
+        <h1 style="    text-align: center;"> Search Github Users</h1>
+    </div>
+    <div>
+        <div class="form-group " style="    margin-top: 5vh;">
+            <input type="email" class="form-control container " placeholder="Search Users " style="width: 22%;" [(ngModel)]="searchString">
+        </div>
+        <div>
+
+            <button type="button" class="btn btn-primary container button" (click)="getUserData() ">Search</button>
+
+        </div>
+
+
+
+        <div>
+            <table class="table table-striped container" style="text-align: center; margin-top: 4vh;">
+                <thead>
+                    <tr>
+
+                        <th scope="col">avatar_url</th>
+                        <th scope="col">id</th>
+                        <th scope="col">login</th>
+                        <th scope="col">score</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let data of usersList |filter:searchString">
+                        <th scope="row">1</th>
+                        <td> <img style="    height: 44px;
+                            width: 44px;
+                            border-radius: 150px;" src="{{data.avatar_url}}"> </td>
+                        <td>{{data.id}}</td>
+                        <td>{{data.login}}</td>
+                        <td>{{data.score}}</td>
+                        <td>
+                            <button class="btn btn-info" routerLink="/user/{{data.login}}">Go to Profile Pge</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

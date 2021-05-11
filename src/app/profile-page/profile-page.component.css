@@ -1,0 +1,17 @@
+.example-card {
+    max-width: 37vw;
+    background-color: white;
+}
+
+.example-header-image {
+    /* background-image: image('{{userProfile?.avatar_url}}'); */
+    background-size: cover;
+}
+
+.body {
+    height: 768px;
+    background-color: antiquewhite !important;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}

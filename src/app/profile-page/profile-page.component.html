@@ -1,0 +1,41 @@
+<div>
+    <div class="body">
+        <div>
+            <mat-card class="example-card" style="text-align: center;">
+                <div style="    display: flex;
+                align-items: center;
+                padding: 3vh 6vw;">
+                    <img mat-card-image src="{{userProfile?.avatar_url}}" alt="Photo of a Shiba Inu" style="    width: 200px;
+                height: 200px;
+                border-radius: 150px;">
+
+                    <mat-card-header>
+                        <div mat-card-avatar class="example-header-image"></div>
+                        <mat-card-title>{{userProfile?.login}}</mat-card-title>
+                        <mat-card-subtitle>{{userProfile?.name}}</mat-card-subtitle>
+                    </mat-card-header>
+
+
+                </div>
+
+                <mat-card-content style="margin-bottom: 0;">
+                    <h1 style="    font-size: 1.1vw;
+                    font-weight: 600;
+                    font-style: italic;">{{userProfile?.bio}}</h1>
+                </mat-card-content>
+                <mat-card-content>
+                    <h1 style="    font-size: 1.1vw;
+                    font-weight: 600;
+                    font-style: italic;">{{userProfile?.blog}}</h1>
+                    <p>{{userProfile?.company}}</p>
+                    <p>{{userProfile?.email}}</p>
+                    <p>{{userProfile?.location}}</p>
+                </mat-card-content>
+                <mat-card-actions>
+                    <h1 mat-button>Total followers {{userProfile?.followers}}</h1>
+                    <h1 mat-button>Total following {{userProfile?.following}}</h1>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+    </div>
+</div>
